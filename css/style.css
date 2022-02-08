@@ -58,12 +58,36 @@ body{
     color: #F2E3D5;
     font-size: 8vh;
 }
+.select-country{
+    background-color: #012E40;
+    display: flex;
+    width: 180px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 0 auto 30px;
+}
+.select-country p{
+    color: #F2E3D5;
+}
+.select-country button{
+    background: none;
+    border: none;
+    margin: 0 60px;
+    outline: none;
+    cursor: pointer;
+}
+.fas {
+    color: #F2E3D5;
+}
 .mapa-brasil{
-    width: 708px;
-    height: 711px;
+    width: 600px;
+    height: 603px;
 }
 .pacotes{
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -72,34 +96,86 @@ body{
     width: 100%;
     height: 100%;
 }
-.mg{
+#mg{
     position: relative;
-    width: 200px;
-    height: 158px;
+    width: 167px;
+    height: 131px;
     background-color: rgba(0, 0, 0, .0);
-    bottom: 357px;
-    left: 416px;
+    bottom: 302px;
+    left: 354px;
     transition: all 1s ease;
 }
-.mg:hover{
-    background-image: url("../img/mg-dark.png");
+#ma{
+    position: relative;
+    width: 95px;
+    height: 136px;
+    background-color: rgba(0, 0, 0, .0);
+    bottom: 734px;
+    left: 396px;
+    transition: all 1s ease;
+}
+#rs{
+    position: relative;
+    width: 117px;
+    height: 99px;
+    background-color: rgba(0, 0, 0, .0);
+    bottom: 234px;
+    left: 252px;
+    transition: all 1s ease;
+}
+
+#mg:hover{
+    background-image: url("../img/mg.png");
+}
+#ma:hover{
+    background-image: url("../img/ma.png");
+}
+#rs:hover{
+    background-image: url("../img/rs.png");
 }
 .pacote-type{
-    width: calc(100% - 800px);
-    margin-bottom: 20px;
+    width: calc(100% - 700px);
 }
 .pacotes-title {
     color: #012E40;
-    font-size: 64px;
+    font-size: 36px;
+}
+.price{
+    color: #024959;
+    font-size: 20px;
+    display: inline-block;
+}
+.reserve{
+    width: max-content;
+    display: inline-block;
+    margin: 10px 0 10px 5px;
+    background: #012E40;
+    color: #F2E3D5;
+    padding: 15px 25px;
+    border-radius: 6px;
 }
 .pacotes-descricao{
     color: #024959;
-    font-size: 36px;
+    font-size: 20px;
     margin: 20px 0;
 }
 .acomodacao{
-    font-size: 42px;
-    margin-top: 50px;
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+.container-hotel-image{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.hotel-image{
+    width: 220px;
+    height: 160px;
+}
+.hotel-image img{
+    width: 100%;
+    height: 100%;
+    align-content: center;
 }
 .align-acomodacao{
     font-size: 22px;
@@ -124,26 +200,37 @@ body{
     margin-top: 20px;
 }
 .pacote-image{
-    width: 220px;
-    height: 160px;
-    align-content: center;
+    width: 200px;
+    height: 140px;
 }
 .pacote-image img{
     position: absolute;
-    width: 220px;
-    height: 160px;
+    width: 200px;
+    height: 140px;
 }
 .image-title{
     position: relative;
-    width: 220px;
+    width: 200px;
     text-align: center;
     background-color: #012E40;
     color: #F2E3D5;
     padding: 10px 0;
-    top: 120px;
+    top: 100px;
     transition: all 1s ease-in;
-    display: none;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    transition: all .2s ease;
 }
 .pacote-image img:hover + .image-title{
-    display: block;
+    transform: rotateX(0);
+}
+.pacote-image .image-title:hover{
+    transform: rotateX(0);
+}
+
+.gramado{
+    display: none;
+}
+.capitolio{
+    display: none;
 }
