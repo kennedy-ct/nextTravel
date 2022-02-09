@@ -233,98 +233,167 @@ body{
 }
 .promocoes{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap:  50px;
     margin-top: 100px;
     width: 100%;
-    height: 1000px;
+    height: 94vh;   
 }
-.promocoes h1{
-    font-size: 48px;
-    color: #012E40;
-    margin-bottom: 20px;
-}
-.promocoes h2{
-    font-size: 32px;
-    color: #012E40;
-    margin-bottom: 10px;
-}
-.promocoes p{
-    font-size:20px;
-    color: #024959;
-}
-.promocoes .pacotes-descricao{
-    color: #F2E3D5;
-}
-.promocoes-esquerda{
-    width: 50%;
-    margin-left: 50px ;
-}
-.promocoes img{
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: top left;
-    margin-top: 50px;
-}
-.promocoes-direita{
+.promocoes-cartao{
+    width: 400px;
     height: 100%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
-.promocoes-direita .promocoes-incluso{
-    font-size: 42px;
-    margin: 0  auto 50px;
+
+.topo-cartao h2{
+    text-align: center;
+    background-color: #012E40;
+    border-radius: 6px 6px 0 0 ;
+    color: #F2E3D5;
+    padding: 10px 0;
 }
-.promocoes .alinhar-acomodacao p{
-    font-size: 14px;
+.promocoes-cartao h3{
+    margin-left: 10px;
+}
+.rodape-cartao a{
+    margin: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #012E40;
+    border-radius: 0 0 6px 6px ;
+    color: #F2E3D5;
+    padding: 10px 0 5px 0;
+}
+.promocoes-cartao .desconto{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: 320px;
+    margin-top: 160px;
+}
+.promocoes-cartao img{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+.promocoes .estrela{
+    margin-left: 10px;
+    width: 100px;
+    height: 15px;
+    display: block;
 }
 .promocoes .estrela img{
-    margin: 0;
     width: 15px;
     height: 15px;
 }
-.promocoes .estrela{
-    margin: 0;
+.promocoes-cartao h4{
+    font-size:  16px;
+    margin-left: 10px;
 }
-.promocoes h3{
-    font-size: 24px;
-    margin-bottom: 20px;
+.promocoes-cartao p{
+    font-size: 16px;
+    margin-left: 10px;
 }
-.voo h4{
-    display: inline;
+.ida{
+    height: 30px;
+    margin: 10px 0 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
-.voo p{
-    display: inline;
+.volta{
+    height: 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.voo-tipo{
+    background-color: #012E40;
+    color: #F2E3D5;
+    border-radius: 6px;
+    padding: 2px;
+}
+.nome-hotel{
+    font-size: 28px;
+    margin-left: 10px;
+}
+.promocoes-cartao .alinhar-acomodacao{
+    gap: 20px;
+    justify-content: center;
+}
+.promocoes-cartao .alinhar-acomodacao p{
+    margin-left: 10px;
+    font-size: 13px;
+}
+.imagem-hotel{
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    gap: 10px;
+}
+.imagem-hotel img{
+    height: 100%;
+    width: 30%;
+}
+.sobre{
+    margin-top: 100px;
+    background-color: #012E40;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sobre-template{
+    background-color: #fff;
+    width: 90%;
+    height: 80%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre-container-titulo{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+.sobre h1{
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 42px;
+    color: #012E40;
+}
+.sobre p{
+    padding: 20px;
     font-size: 20px;
     color: #024959;
 }
-.voo span{
-    background-color: #012E40;
-    color: #F2E3D5;
-    padding: 3px 5px;
-    border-radius: 4px;
+.sobre-container-titulo{
+    margin-top: 50px;
 }
-.voo .volta{
-    margin-bottom: 50px;
-    display: inline;
-    width: auto;
-}
-.nome-hotel{
-    font-size: 42px !important;
-    margin: 0 !important;
-}
-.imagem-hotel{
-    margin: 0;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-}
-.imagem-hotel img{
-    width: 160px;
-    height: 120px;
+.sobre-container-titulo p{
     margin-top: 20px;
+    font-size: 16px;
+    padding: 0;
 }
-
-
+.sobre-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sobre-container .sobre-imagem{
+    width: 27%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sobre-imagem img{
+    width: 40%;
+}
