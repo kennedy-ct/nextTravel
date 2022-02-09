@@ -9,7 +9,7 @@
 body{
     overflow-x: hidden;
 }
-#header{
+#cabecalho{
     position: absolute;
     height: 70px;
     width: 100%;
@@ -17,7 +17,7 @@ body{
     align-items: center;
     justify-content:  space-between;
 }
-#header-container{
+#cabecalho-container{
     align-items: center;
     display: flex;
     gap: 50px;
@@ -30,27 +30,27 @@ body{
     color: #012E40;
     font-size: 20px;
 }
-#header #logo{
+#cabecalho #logo{
     height: 55px;
     margin-left: 20px;
 }
-#header #login{
+#cabecalho #login{
     margin-right: 20px;
 }
 #main #background{
     width: 101%;
 }
-#main-title-container{
+#main-titulo-container{
     position: absolute;
     top: 20%;
     left: 5%;
 }
-#main-title{
+#main-titulo{
     color: #012E40;
     font-weight: 300;
     font-size: 16vh;
 }
-#main-subtitle{
+#main-subtitulo{
     margin-top: 10px;
     border-bottom: 1px solid #012E40;
     border-top: 1px solid #012E40;
@@ -58,7 +58,7 @@ body{
     color: #F2E3D5;
     font-size: 8vh;
 }
-.select-country{
+.selecionar-pais{
     background-color: #012E40;
     display: flex;
     width: 180px;
@@ -69,17 +69,17 @@ body{
     border-radius: 6px;
     margin: 0 auto 30px;
 }
-.select-country p{
+.selecionar-pais p{
     color: #F2E3D5;
 }
-.select-country button{
+.selecionar-pais button{
     background: none;
     border: none;
     margin: 0 60px;
     outline: none;
     cursor: pointer;
 }
-.fas {
+.fas, .far, .fa{
     color: #F2E3D5;
 }
 .mapa-brasil{
@@ -133,14 +133,14 @@ body{
 #rs:hover{
     background-image: url("../img/rs.png");
 }
-.pacote-type{
+.pacote-tipo{
     width: calc(100% - 700px);
 }
-.pacotes-title {
+.pacotes-titulo {
     color: #012E40;
     font-size: 36px;
 }
-.price{
+.preco{
     color: #024959;
     font-size: 20px;
     display: inline-block;
@@ -161,54 +161,49 @@ body{
 }
 .acomodacao{
     font-size: 32px;
-    margin: 20px 0 10px;
+    margin-top: 20px;
 }
-.container-hotel-image{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.estrela{
+    width: 100px;
+    height: 15px;
+    display: block;
 }
-.hotel-image{
-    width: 220px;
-    height: 160px;
+.estrela img{
+    width: 15px;
+    height: 15px;
 }
-.hotel-image img{
-    width: 100%;
-    height: 100%;
-    align-content: center;
-}
-.align-acomodacao{
+.alinhar-acomodacao{
     font-size: 22px;
     display: flex;
     gap: 20px;
     justify-content: space-between;
 }
-.align-acomodacao p{
+.alinhar-acomodacao p{
     padding: 10px;
     color: #F2E3D5;
     background-color: #012E40;
     font-size: 18px;
     border-radius: 6px;
 }
-.align-acomodacao .fas, .far{
+.alinhar-acomodacao .fas, .far{
     margin-right: 5px;
 }
-.container-images{
+.container-imagens{
     display: flex;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
-.pacote-image{
+.pacote-imagem{
     width: 200px;
     height: 140px;
 }
-.pacote-image img{
+.pacote-imagem img{
     position: absolute;
     width: 200px;
     height: 140px;
 }
-.image-title{
+.imagem-titulo{
     position: relative;
     width: 200px;
     text-align: center;
@@ -221,16 +216,115 @@ body{
     transform-origin: bottom;
     transition: all .2s ease;
 }
-.pacote-image img:hover + .image-title{
+.pacote-imagem img:hover + .imagem-titulo{
     transform: rotateX(0);
 }
-.pacote-image .image-title:hover{
+.pacote-imagem .imagem-titulo:hover{
     transform: rotateX(0);
 }
-
 .gramado{
     display: none;
 }
 .capitolio{
     display: none;
 }
+.barreirinhas{
+    display: none;
+}
+.promocoes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 100%;
+    height: 1000px;
+}
+.promocoes h1{
+    font-size: 48px;
+    color: #012E40;
+    margin-bottom: 20px;
+}
+.promocoes h2{
+    font-size: 32px;
+    color: #012E40;
+    margin-bottom: 10px;
+}
+.promocoes p{
+    font-size:20px;
+    color: #024959;
+}
+.promocoes .pacotes-descricao{
+    color: #F2E3D5;
+}
+.promocoes-esquerda{
+    width: 50%;
+    margin-left: 50px ;
+}
+.promocoes img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top left;
+    margin-top: 50px;
+}
+.promocoes-direita{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.promocoes-direita .promocoes-incluso{
+    font-size: 42px;
+    margin: 0  auto 50px;
+}
+.promocoes .alinhar-acomodacao p{
+    font-size: 14px;
+}
+.promocoes .estrela img{
+    margin: 0;
+    width: 15px;
+    height: 15px;
+}
+.promocoes .estrela{
+    margin: 0;
+}
+.promocoes h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.voo h4{
+    display: inline;
+}
+.voo p{
+    display: inline;
+    font-size: 20px;
+    color: #024959;
+}
+.voo span{
+    background-color: #012E40;
+    color: #F2E3D5;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+.voo .volta{
+    margin-bottom: 50px;
+    display: inline;
+    width: auto;
+}
+.nome-hotel{
+    font-size: 42px !important;
+    margin: 0 !important;
+}
+.imagem-hotel{
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+.imagem-hotel img{
+    width: 160px;
+    height: 120px;
+    margin-top: 20px;
+}
+
+

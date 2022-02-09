@@ -7,10 +7,11 @@
     <title>Next Travel - Nós mostramos, você decide </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/logo.png">
+    
 </head>
 <body>
-    <header id="header">
-        <div id="header-container">
+    <header id="cabecalho">
+        <div id="cabecalho-container">
             <img id="logo" src="img/logo.png" alt="next travel logo">
             <nav id="menu">
                 <a class="menu-item" href="#">Início</a>
@@ -23,17 +24,17 @@
         <a id="login" href="#"><img src="img/login.svg" alt="logo Login"></a>
     </header>
     <main id="main">
-        <img id="background" src="img/background.jpg" alt="background image">
-        <div id="main-title-container">
-            <h1 id="main-title">Next Travel</h1>
-            <h2 id="main-subtitle">Nós te mostramos <br> o que há de melhor. <br>Quem decide é você!</h2>
+        <img id="background" src="img/background.jpg" alt="imagem background">
+        <div id="main-titulo-container">
+            <h1 id="main-titulo">Next Travel</h1>
+            <h2 id="main-subtitulo">Nós te mostramos <br> o que há de melhor. <br>Quem decide é você!</h2>
         </div>
     </main>
     <section class="pacotes">
         <div class="mapa-brasil">
-            <div class="select-country">
+            <div class="selecionar-pais">
                 <button type="button" onclick="toLeft()"><i class="fas fa-chevron-left"></i></button>
-                <p class="country">Brasil</p>
+                <p class="pais">Brasil</p>
                 <button type="button" onclick="toRight()"><i class="fas fa-chevron-right"></i></button>
             </div>
             <img class="brasil" src="img/brasil.png" alt="mapa brasil">
@@ -41,89 +42,180 @@
             <div onclick="changePackage(id)" id="rs"></div>
             <div onclick="changePackage(id)" id="ma"></div>
         </div>
-        <div class="pacote-type capitolio" id="capitolio">
-            <h1 class="pacotes-title">Capitólio - MG</h1>
+        <div class="pacote-tipo capitolio" id="capitolio">
+            <h1 class="pacotes-titulo">Capitólio - MG</h1>
             <p class="pacotes-descricao">Capitólio em Minas Gerais é um dos destinos mais cobiçados no Brasil. A cidade banhada pelo Lago de Furnas é a mais famosa dessa região com muitas cachoeiras, mirantes, trilhas e atrações junto a natureza.</p>
-            
-            <div class="container-images">
-                <div class="pacote-image"><img src="img/capitolio-1.jpg" alt="">
-                    <div class="image-title">Capitolio</div>
+            <i class="fa-duotone fa-star"></i>
+            <div class="container-imagens">
+                <div class="pacote-imagem"><img src="img/capitolio-1.jpg" alt="">
+                    <div class="imagem-titulo">Capitolio</div>
                 </div>
-                <div class="pacote-image"><img src="img/capitolio-2.jpg" alt="">
-                    <div class="image-title">Capitolio</div>
+                <div class="pacote-imagem"><img src="img/capitolio-2.jpg" alt="">
+                    <div class="imagem-titulo">Capitolio</div>
                 </div>
-                <div class="pacote-image"><img src="img/capitolio-3.jpg" alt="">
-                    <div class="image-title">Capitolio</div>
+                <div class="pacote-imagem"><img src="img/capitolio-3.jpg" alt="">
+                    <div class="imagem-titulo">Capitolio</div>
                 </div>
             </div>
-            <h2 class="acomodacao">Hotel Americano</h2>
-            <div class="container-hotel-image">
-                <div class="hotel-image"><img src="img/hotel-1.jpg" alt=""></div>
-                <div class="hotel-image"><img src="img/hotel-2.jpg" alt=""></div>
-                <div class="hotel-image"><img src="img/hotel-3.jpg" alt=""></div>
-            </div>
-            <div class="align-acomodacao">
+            <h2 class="acomodacao">Hotel Americano </h2>
+            <span class="estrela">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-white.svg" alt="">
+                <img src="img/star-white.svg" alt="">
+
+            </span>
+            <div class="alinhar-acomodacao">
                 <p class="pacotes-descricao acomodacao-tipo"><i class="fas fa-user-friends"></i>2 adultos</p>
                 <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias | 10 de dez - 15 de dez</p>
                 <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
             </div>
-            <p class="price">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
             <a class="reserve" href="#">Reservar agora!</a>
         </div>
-        <div class="pacote-type" id="gramado">
-            <h1 class="pacotes-title">Gramado - RS</h1>
+        <div class="pacote-tipo" id="gramado">
+            <h1 class="pacotes-titulo">Gramado - RS</h1>
             <p class="pacotes-descricao">A vocação turística de Gramado e sua posição de destaque entre os destinos de inverno brasileiros são inegáveis. O clima e o relevo da Serra Gaúcha, unidos a uma gastronomia vigorosa com influência da imigração europeia, são impulsionados há anos por investimento  em estrutura hoteleira, atrações e novidades a cada temporada.</p>
-            <div class="container-images">
-                <div class="pacote-image"><img src="img/gramado-1.jpg" alt="">
-                    <div class="image-title">Gramado</div>
+            <div class="container-imagens">
+                <div class="pacote-imagem"><img src="img/gramado-1.jpg" alt="">
+                    <div class="imagem-titulo">Gramado</div>
                 </div>
-                <div class="pacote-image"><img src="img/gramado-2.jpg" alt="">
-                    <div class="image-title">Gramado</div>
+                <div class="pacote-imagem"><img src="img/gramado-2.jpg" alt="">
+                    <div class="imagem-titulo">Gramado</div>
                 </div>
-                <div class="pacote-image"><img src="img/gramado-3.jpg" alt="">
-                    <div class="image-title">Gramado</div>
+                <div class="pacote-imagem"><img src="img/gramado-3.jpg" alt="">
+                    <div class="imagem-titulo">Gramado</div>
                 </div>
             </div>
             <h2 class="acomodacao">Hotel Americano</h2>
-            <div class="container-hotel-image">
-                <div class="hotel-image"><img src="img/hotel-1.jpg" alt=""></div>
-                <div class="hotel-image"><img src="img/hotel-2.jpg" alt=""></div>
-                <div class="hotel-image"><img src="img/hotel-3.jpg" alt=""></div>
-            </div>
-            <div class="align-acomodacao">
+            <span class="estrela">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-white.svg" alt="">
+
+            </span>
+            <div class="alinhar-acomodacao">
                 <p class="pacotes-descricao acomodacao-tipo"><i class="fas fa-user-friends"></i>2 adultos</p>
                 <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias | 10 de dez - 15 de dez</p>
                 <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
             </div>
-            <p class="price">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
+            <a class="reserve" href="#">Reservar agora!</a>
+        </div>
+        <div class="pacote-tipo barreirinhas" id="barreirinhas">
+            <h1 class="pacotes-titulo">Barreirinhas - MA</h1>
+            <p class="pacotes-descricao">Paraíso escondido no Nordeste do Brasil, os Lençóis Maranhenses são um dos principais destinos turísticos do Maranhão. Criado em 1981, o Parque Nacional dos Lençóis Maranhenses – com área total de 156,5 mil hectares – integra a Rota das Emoções. As dunas – comuns nessa região do país – são formadas pela força dos ventos, que criam uma paisagem única e alteram constantemente sua aparência</p>
+            <div class="container-imagens">
+                <div class="pacote-imagem"><img src="img/barreirinhas-1.jpg" alt="">
+                    <div class="imagem-titulo">barreirinhas</div>
+                </div>
+                <div class="pacote-imagem"><img src="img/barreirinhas-2.jpg" alt="">
+                    <div class="imagem-titulo">barreirinhas</div>
+                </div>
+                <div class="pacote-imagem"><img src="img/barreirinhas-3.jpg" alt="">
+                    <div class="imagem-titulo">barreirinhas</div>
+                </div>
+            </div>
+            <h2 class="acomodacao">Hotel Americano</h2>
+            <span class="estrela">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+
+            </span>
+            <div class="alinhar-acomodacao">
+                <p class="pacotes-descricao acomodacao-tipo"><i class="fas fa-user-friends"></i>2 adultos</p>
+                <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias | 10 de dez - 15 de dez</p>
+                <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
+            </div>
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
             <a class="reserve" href="#">Reservar agora!</a>
         </div>
     </section>
+    <section class="promocoes">
+        <div class="promocoes-esquerda">
+            <h1 class="promocoes-titulo">Venha curtir 5 dias no Rio de Janeiro</h1>
+            <p class="promocoes-descricao">Os pontos turísticos do Rio de Janeiro estão entre os lugares que todo mundo deveria visitar ao menos uma vez na vida. Por esse motivo preparamos essa incrível e completa experiência pela cidade maravilhosa</p>
+            <img src="img/praia-rio.jpg" alt="">
+            <h2>Praias</h2>
+            <p>As melhores praias do Rio de Janeiro atraem visitantes do mundo inteiro. A imensidão do mar carioca é o grande cartão de visita e entra no roteiro de viagem de todos os turistas. O clima quente da região sem dúvida pede um mergulho ao mar.</p>
+            <p>Já pensou curtir a praia de Ipanema, Copacana e Leblon tudo em apenas uma viagem com um valor super acessivel ? Nós iremos te proporcionar essa e muitas outras atrações durante essa viagem</p>
+            <img src="img/cristo-redentor.jpg" alt="">
+            <h2>Cristo Redentor</h2>
+            <p>Literalmente de braços abertos, o Cristo Redentor, no morro do Corcovado,  recebe diariamente milhares de turistas de diversos lugares do mundo. É necessário subir 700 metros do nível do mar para, enfim, chegar ao pico onde está a estátua que é cartão postal da cidade. O Cristo Redentor fica dentro do Parque Nacional da Tijuca e existem duas maneiras de chegar: nas vans autorizadas do Paineiras, que saem de diversos pontos do Rio, e no trem do Corcovado. E tudo isso esta nesse maravilhoso pacote para que você possa aproveitar muito</p>
+            <img src="img/pao-de-acucar.jpg" alt="">
+            <h2>Pão de açúcar</h2>
+            <p>O Bondinho do Pão de Açúcar está entre os principais pontos turísticos do Rio de Janeiro e foi inaugurado em 1912, sendo o primeiro teleférico do Brasil e o terceiro no mundo. Ele liga o Morro da Urca ao Morro do Pão de Açúcar – e mais de 40 milhões de pessoas já andaram nos bondinhos</p>
+        </div>
+        <div class="promocoes-direita">
+            <h2 class="promocoes-incluso">Esse pacote inclui</h2>
+            <div class="voo">
+                <h3>VOO - Latam Airlines Group</h3>
+                <div class="ida">
+                    <h4>IDA</h4>
+                    <P>qua. 22 de jun. às 08.10</P>
+                    <span class="voo-tipo">GRU - RIO</span>
+                </div>
+                <br>
+                <div class="volta">
+                    <h4>VOLTA</h4>
+                    <P>qua. 27 de jun. às 17.40</P>
+                    <span class="voo-tipo">RIO - GRU</span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h3>Hospedagem em hotel 4 estrelas</h3>
+            <h3 class="nome-hotel">Hotel Tal</h3>
+            <span class="estrela">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+                <img src="img/star-blue.svg" alt="">
+            </span>
+            <div class="imagem-hotel">
+                <img src="img/hotel-1.jpg" alt="">
+                <img src="img/hotel-2.jpg" alt="">
+                <img src="img/hotel-3.jpg" alt="">
+            </div>
+            <div class="alinhar-acomodacao">
+                <p class="pacotes-descricao acomodacao-tipo"><i class="fas fa-user-friends"></i>2 adultos</p>
+                <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias | 10 de dez - 15 de dez</p>
+                <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
+            </div>
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
+            <a class="reserve" href="#">Reservar agora!</a>
+        </div>
+        </section>
 
     <script src="https://kit.fontawesome.com/407f74df21.js" crossorigin="anonymous"></script>
     <script>
         var gramado = document.querySelector('#gramado');
         var capitolio = document.querySelector('#capitolio');
-        var ma = document.querySelector('#ma');
-        let countries = ['Brasil', 'Inglaterra', 'Austrália'];
-        var country = document.querySelector('.country');
-
+        var barreirinhas = document.querySelector('#barreirinhas');
         function changePackage(id){
             
             if(id == 'mg'){
-                gramado.classLis.add("gramado");
+                gramado.classList.add("gramado");
                 capitolio.classList.remove('capitolio'); 
+                barreirinhas.classList.add("barreirinhas");
             }
             else if(id == 'rs'){
                 capitolio.classList.add("capitolio");
                 gramado.classList.remove("gramado");
+                barreirinhas.classList.add("barreirinhas");
             }
-        }
-
-        function toRight(){
-            
-            if(country.includes('Brasil')){
-                console.log(country)
+            else if(id == 'ma'){
+                barreirinhas.classList.remove("barreirinhas");
+                gramado.classList.add("gramado");
+                capitolio.classList.add('capitolio'); 
             }
         }
     </script>
