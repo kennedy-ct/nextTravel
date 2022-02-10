@@ -9,8 +9,9 @@
 body{
     overflow-x: hidden;
 }
+
 @media (max-width: 700px) {
-    #cabecalho{
+    .cabecalho{
         flex-direction: column-reverse;
         align-items: flex-end !important;
         margin-top: 150px;
@@ -153,7 +154,120 @@ body{
         animation-fill-mode: forwards;
     }
 }
-#cabecalho{
+@keyframes abrirMenu{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+@keyframes fecharMenu{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
+@keyframes mudarBotao{
+    from{
+        transform: rotateZ(0);
+        opacity: 100%;
+        background-image: url("../img/open-menu.svg");
+    }
+    from{
+        transform: rotateZ(90deg);
+        opacity: 0;
+        background-image: url("../img/close-menu.svg");
+    }
+}
+@media(max-width: 450px){
+    #main{
+        height: 270px !important;
+    }
+    #main #background{
+        width: 100%;
+        background-size: cover;
+        height: 100% !important;
+    }
+    .cabecalho{
+        height: 57% !important;
+        top: 0px;
+        left: 0px;
+        background-color: #012E40 !important;
+        margin: 0px !important;
+        z-index: 1000;
+        align-items: center !important;
+        animation: fecharMenu 400ms ease forwards;
+    }
+    #cabecalho-container{
+        width: 100% !important;
+    }
+    #menu{
+        width: 100% !important;
+        align-items: center !important;
+        flex-direction: column;
+        gap: 10px !important;
+        margin: 0 !important;
+    }
+    #login-claro{
+
+        display: block !important;
+        width: 50px !important;
+        margin: 5px 0 !important;
+    }
+    #login-claro img{
+        width: 100%;
+    }
+    #login{
+        display: none;
+    }
+    .menu-item{
+        text-align: center;
+        padding-bottom: 10px;
+        width: 100% !important;
+        display: block !important;
+        color: #F2E3D5 !important;
+        border-bottom: #F2E3D5 solid 1px;
+    }
+    #main-titulo{
+        margin-top: 30px !important;
+    }
+    .logo-mobile{
+        display: block !important;
+        margin: 5px 10px;
+        position: absolute;
+        width: 40px;
+    }
+    .logo-mobile img{
+        width: 100%;
+    }
+    .logo-mobile-oculto{
+        display: none !important;
+    }
+    .mostrandoCabecalho{
+        animation: abrirMenu 400ms forwards;
+    }
+    .abrir-menu{
+        right: 0;
+        margin: 0 15px ;
+        position: absolute;
+        background-image: url("../img/open-menu.svg");
+        width: 20px;
+        height: 20px;
+        z-index: 10000;
+    }
+    .fechar-botao{
+        width: 20px;
+        height: 20px;
+        animation: mudarBotao 1s ease;
+        background-image: url("../img/close-menu.svg");
+    }
+}
+.cabecalho{
     position: absolute;
     height: 70px;
     width: 100%;
@@ -174,11 +288,18 @@ body{
     color: #012E40;
     font-size: 20px;
 }
-#cabecalho #logo{
+.cabecalho #logo{
     height: 55px;
     margin-left: 20px;
 }
-#cabecalho #login{
+.logo-mobile{
+    display: none;
+}
+.cabecalho #login{
+    margin-right: 20px;
+}
+.cabecalho #login-claro{
+    display: none;
     margin-right: 20px;
 }
 #main #background{

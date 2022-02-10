@@ -10,7 +10,11 @@
     
 </head>
 <body>
-    <header id="cabecalho">
+    <div class="logo-mobile">
+        <img src="img/logo.png" alt="">   
+    </div>
+    <div onClick="abrirMenu()" class="abrir-menu"></div>
+    <header class="cabecalho">
         <div id="cabecalho-container">
             <img id="logo" src="img/logo.png" alt="next travel logo">
             <nav id="menu">
@@ -22,6 +26,7 @@
             </nav>
         </div>
         <a id="login" href="#"><img src="img/login.svg" alt="logo Login"></a>
+        <a id="login-claro" href="#"><img src="img/login-claro.svg" alt="logo Login"></a>
     </header>
     <main id="main">
         <img id="background" src="img/background.jpg" alt="imagem background">
@@ -309,6 +314,8 @@
         var gramado = document.querySelector('#gramado');
         var capitolio = document.querySelector('#capitolio');
         var barreirinhas = document.querySelector('#barreirinhas');
+        var cabecalho = document.querySelector('.cabecalho');
+        var botao = document.querySelector('.abrir-menu');
         function changePackage(id){
             
             if(id == 'mg'){
@@ -326,6 +333,10 @@
                 gramado.classList.add("gramado");
                 capitolio.classList.add('capitolio'); 
             }
+        }
+        function abrirMenu(){
+            cabecalho.classList.toggle('mostrandoCabecalho');
+            botao.classList.toggle('fechar-botao')
         }
     </script>
 </body>
