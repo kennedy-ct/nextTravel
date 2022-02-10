@@ -30,6 +30,41 @@ body{
     .pacote-tipo{
         width: 80%;
     }
+    
+}
+
+@media (max-width: 1200px){
+    .sobre{
+        margin-top: 100px !important;
+        flex-direction: column !important;
+    }
+    .sobre-template{
+        align-items: flex-start !important;
+    }    
+    .sobre-imagem{
+        flex-direction: row !important;
+    }
+    .sobre-container-titulo{
+        display: none !important;
+    }
+    .sobre-tablet{
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        width: 95% !important;
+        background-color: #012E40;
+    }
+    .sobre-tablet .sobre-imagem{
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }    
+    .sobre-tablet img{
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+@media (max-width: 1300px){
     .promocoes{
         margin-top: 0;
         width: 100%;
@@ -62,34 +97,60 @@ body{
         width: 15px;
         height: 15px;
     }
-    .sobre{
-        margin-top: 100px !important;
-        flex-direction: column !important;
+}
+@media (max-width: 1300px){ 
+    .brasil{
+        display: none;
     }
-    .sobre-template{
-        align-items: flex-start !important;
-    }    
-    .sobre-imagem{
-        flex-direction: row !important;
-    }
-    .sobre-container-titulo{
-        display: none !important;
-    }
-    .sobre-tablet{
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center;
-        width: 95% !important;
-        background-color: #012E40;
-    }
-    .sobre-tablet .sobre-imagem{
+    .brasil-pqn{
         margin-left: 20px;
-        display: flex;
-        align-items: center;
-    }    
-    .sobre-tablet img{
-        width: 40px !important;
-        height: 40px !important;
+        display: block !important;
+    }
+    .imagem-titulo{
+        display: none;
+    }
+    .alinhar-acomodacao .pacotes-descricao{
+        font-size: 12px !important;
+    }
+    #mg{
+        width: 97px !important;
+        height: 77px !important;
+        background-color: rgba(0, 0, 0, .0);
+        bottom: 174px !important;
+        left: 226px !important;
+    }
+    #ma{
+        width: 55px !important;
+        height: 79px !important;
+        background-color: rgba(0, 0, 0, .0);
+        bottom: 424px !important;
+        left: 251px !important;
+    }
+    #rs{
+        width: 69px !important;
+        height: 56px !important;
+        background-color: rgba(0, 0, 0, .0);
+        bottom: 134px !important;
+        left: 168px !important;
+    }
+    
+    #mg:hover{
+        background-size: cover !important;
+        animation-name: fadeMg;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+    }
+    #ma:hover{
+        background-size: cover !important;
+        animation-name: fadeMaPqn;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
+    }
+    #rs:hover{
+        background-size: cover !important;
+        animation-name: fadeRsPqn;
+        animation-duration: 200ms;
+        animation-fill-mode: forwards;
     }
 }
 #cabecalho{
@@ -176,6 +237,9 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+.brasil-pqn{
+    display: none;
+}
 .brasil{
     width: 600px;
     height: 603px;
@@ -253,7 +317,8 @@ body{
 }
 
 .pacote-tipo{
-    width: 645px;
+    width: max-content;
+    padding: 0 30px ;
 }
 .pacotes-titulo {
     color: #012E40;
@@ -295,7 +360,6 @@ body{
     font-size: 22px;
     display: flex;
     gap: 20px;
-    justify-content: space-between;
 }
 .alinhar-acomodacao p{
     padding: 10px;
@@ -311,21 +375,21 @@ body{
     width: 100%;
     display: flex;
     gap: 20px;
-    justify-content: center;
     margin-top: 20px;
 }
 .pacote-imagem{
-    width: 200px;
-    height: 140px;
+    position: relative;
+    width: 33%;
+    height: 10vw;
 }
 .pacote-imagem img{
     position: absolute;
-    width: 200px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
 }
 .imagem-titulo{
     position: relative;
-    width: 200px;
+    width: 100%;
     text-align: center;
     background-color: #012E40;
     color: #F2E3D5;
@@ -463,7 +527,7 @@ body{
 }
 .sobre{
     margin-top: 50px;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -474,7 +538,7 @@ body{
 .sobre-template{
     background-color: #012E40;
     width: 95%;
-    height: 98vh;
+    height: 100%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
@@ -498,7 +562,7 @@ body{
     color: #F2E3D5;
 }
 .sobre-container-titulo{
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .sobre-container-titulo p{
     margin-top: 20px;
