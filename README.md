@@ -1,6 +1,14 @@
-<h1>Next Travel</h1>
-<p>Projeto pessoal com intuito de aprendizado de Js, um site de pacotes de viagem</p>
-<p>Um "one pager site" de compras de pacotes de viagem, onde é possível selecionar o estado que deseja viajar atraves de um mapa</p>
+# <h1>Next Travel</h1>
+Projeto pessoal com intuito de aprendizado, um site de pacotes de viagem
+
+
+- **Status** - Em desenvolvimento (podem haver bugs)     
+- "One pager site" responsivo em **HTML**, **CSS** e **JavaScript**
+- Mapa animado para seleção de pacotes
+
+
+
+
 
 
 
