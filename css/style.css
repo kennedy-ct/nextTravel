@@ -9,6 +9,89 @@
 body{
     overflow-x: hidden;
 }
+@media (max-width: 700px) {
+    #cabecalho{
+        flex-direction: column-reverse;
+        align-items: flex-end !important;
+        margin-top: 150px;
+    }
+    #logo{
+        display: none;
+    }
+    #menu{
+        margin-right: 20px;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 10px !important;
+    }
+    .mapa-brasil{
+        display: none;
+    }
+    .pacote-tipo{
+        width: 80%;
+    }
+    .promocoes{
+        margin-top: 0;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: start !important;
+    }
+    .promocoes-cartao{
+        position: relative;
+        width: 400px !important;
+        height: 100% !important;
+    }
+    .promocoes-cartao .imagem-apresentacao{
+        width: 400px !important;
+        object-fit: cover;
+        height: 200px;
+    }
+    .promocoes-cartao img{
+        width: 100%;
+        object-fit: cover;
+        height: 200px;
+    }
+    .promocoes .estrela{
+        margin-left: 10px;
+        width: 100px;
+        height: 15px;
+        display: block;
+    }
+    .promocoes .estrela img{
+        width: 15px;
+        height: 15px;
+    }
+    .sobre{
+        margin-top: 100px !important;
+        flex-direction: column !important;
+    }
+    .sobre-template{
+        align-items: flex-start !important;
+    }    
+    .sobre-imagem{
+        flex-direction: row !important;
+    }
+    .sobre-container-titulo{
+        display: none !important;
+    }
+    .sobre-tablet{
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        width: 95% !important;
+        background-color: #012E40;
+    }
+    .sobre-tablet .sobre-imagem{
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }    
+    .sobre-tablet img{
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
 #cabecalho{
     position: absolute;
     height: 70px;
@@ -42,22 +125,23 @@ body{
 }
 #main-titulo-container{
     position: absolute;
-    top: 20%;
+    top: 10vw;
     left: 5%;
 }
 #main-titulo{
     color: #012E40;
     font-weight: 300;
-    font-size: 16vh;
+    font-size: 8vw;
 }
 #main-subtitulo{
     margin-top: 10px;
     border-bottom: 1px solid #012E40;
     border-top: 1px solid #012E40;
-    padding: 30px 0;
+    padding: 2vw 0;
     color: #F2E3D5;
-    font-size: 8vh;
+    font-size: 4vw;
 }
+
 .selecionar-pais{
     background-color: #012E40;
     display: flex;
@@ -93,8 +177,8 @@ body{
     align-items: center;
 }
 .brasil{
-    width: 100%;
-    height: 100%;
+    width: 600px;
+    height: 603px;
 }
 #mg{
     position: relative;
@@ -121,20 +205,55 @@ body{
     background-color: rgba(0, 0, 0, .0);
     bottom: 234px;
     left: 252px;
-    transition: all 1s ease;
 }
-
+@keyframes fadeMg {
+    from {
+        background-image: url("../img/mg.png");
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+        background-image: url("../img/mg.png");
+    }
+}
+@keyframes fadeRs {
+    from {
+        background-image: url("../img/rs.png");
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+        background-image: url("../img/rs.png");
+    }
+}
+@keyframes fadeMa {
+    from {
+        background-image: url("../img/ma.png");
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+        background-image: url("../img/ma.png");
+    }
+}
 #mg:hover{
-    background-image: url("../img/mg.png");
+    animation-name: fadeMg;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
 }
 #ma:hover{
-    background-image: url("../img/ma.png");
+    animation-name: fadeMa;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
 }
 #rs:hover{
-    background-image: url("../img/rs.png");
+    animation-name: fadeRs;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
 }
+
 .pacote-tipo{
-    width: calc(100% - 700px);
+    width: 645px;
 }
 .pacotes-titulo {
     color: #012E40;
@@ -189,6 +308,7 @@ body{
     margin-right: 5px;
 }
 .container-imagens{
+    width: 100%;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -231,13 +351,14 @@ body{
 .barreirinhas{
     display: none;
 }
+
 .promocoes{
     display: flex;
     justify-content: center;
     gap:  50px;
     margin-top: 100px;
     width: 100%;
-    height: 94vh;   
+    height: 97%;   
 }
 .promocoes-cartao{
     width: 400px;
@@ -271,7 +392,7 @@ body{
     width: 60px;
     height: 60px;
     margin-left: 320px;
-    margin-top: 160px;
+    margin-top: 220px;
 }
 .promocoes-cartao img{
     width: 100%;
@@ -332,25 +453,28 @@ body{
 .imagem-hotel{
     display: flex;
     height: 90px;
+    width: 100%;
     justify-content: center;
     gap: 10px;
 }
 .imagem-hotel img{
     height: 100%;
-    width: 30%;
+    width: 30% !important;
 }
 .sobre{
-    margin-top: 100px;
-    background-color: #012E40;
+    margin-top: 50px;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.sobre-tablet{
+    display: none;
+}
 .sobre-template{
-    background-color: #fff;
-    width: 90%;
-    height: 80%;
+    background-color: #012E40;
+    width: 95%;
+    height: 98vh;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
@@ -366,12 +490,12 @@ body{
     margin-top: 30px;
     margin-bottom: 0;
     font-size: 42px;
-    color: #012E40;
+    color: #F2E3D5;
 }
 .sobre p{
     padding: 20px;
     font-size: 20px;
-    color: #024959;
+    color: #F2E3D5;
 }
 .sobre-container-titulo{
     margin-top: 50px;
@@ -397,3 +521,8 @@ body{
 .sobre-imagem img{
     width: 40%;
 }
+.sobre-logo{
+    width: 50%;
+}
+
+
