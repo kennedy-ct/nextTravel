@@ -13,7 +13,7 @@
     <div class="logo-mobile">
         <img src="img/logo.png" alt="">   
     </div>
-    <div onClick="abrirMenu()" class="abrir-menu"></div>
+    <div onClick="abrirMenu()" class="abrir-menu fechar-botao"></div>
     <header class="cabecalho">
         <div id="cabecalho-container">
             <img id="logo" src="img/logo.png" alt="next travel logo">
@@ -149,7 +149,7 @@
                 <h2>Rio de Janeiro</h2>
             </div>
             <img class="imagem-apresentacao" src="img/cristo-redentor.jpg" alt="">
-            <div>
+            <div class="promocoes-conteudo">
                 <h3>VOO - Latam Airlines Group</h3>
                 <div class="ida">
                     <h4>IDA</h4>
@@ -179,20 +179,22 @@
                     <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias</p>
                     <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
                 </div>
-                <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
+                
               
             </div>
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
             <div class="rodape-cartao">
                 <a class="reserve" href="#">Reservar agora!</a>
             </div>
         </div>
+
         <div class="promocoes-cartao">
             <img class="desconto" src="img/20-off.png" alt="">
             <div class="topo-cartao">
                 <h2>Rio de Janeiro</h2>
             </div>
             <img class="imagem-apresentacao" src="img/pao-de-acucar.jpg" alt="">
-            <div>
+            <div class="promocoes-conteudo">
                 <h3>VOO - Latam Airlines Group</h3>
                 <div class="ida">
                     <h4>IDA</h4>
@@ -222,8 +224,8 @@
                     <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias</p>
                     <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
                 </div>
-                <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
                 </div>
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
             <div class="rodape-cartao">
                 <a class="reserve" href="#">Reservar agora!</a>
             </div>
@@ -234,7 +236,7 @@
                 <h2>Rio de Janeiro</h2>
             </div>
             <img class="imagem-apresentacao" src="img/praia-rio.jpg" alt="">
-            <div>
+            <div class="promocoes-conteudo">
                 <h3>VOO - Latam Airlines Group</h3>
                 <div class="ida">
                     <h4>IDA</h4>
@@ -264,8 +266,8 @@
                     <p class="pacotes-descricao acomodacao-descricao"><i class="far fa-calendar-alt"></i>5 diárias</p>
                     <p class="pacotes-descricao acomodacao-refeicao"><i class="fas fa-coffee"></i>5 cafés da manhã </p>
                 </div>
-                <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
                 </div> 
+            <p class="preco">Tudo isso por apenas R$3890,00. Saiba mais detalhes</p>
             <div class="rodape-cartao">
                 <a class="reserve" href="#">Reservar agora!</a>
             </div>
@@ -336,7 +338,8 @@
         }
         function abrirMenu(){
             cabecalho.classList.toggle('mostrandoCabecalho');
-            botao.classList.toggle('fechar-botao')
+            botao.classList.toggle('fechar-botao');
+            botao.classList.toggle('abrir-botao');
         }
     </script>
 </body>

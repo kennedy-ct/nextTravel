@@ -64,36 +64,28 @@
 
 @media (max-width: 1300px){ 
     .promocoes{
-        margin-top: 0;
-        width: 100%;
+        margin-bottom: 100px !important;
+        width: 100vw!important;
+        height: 98vh !important;
         overflow-x: auto;
         overflow-y: hidden;
         justify-content: start !important;
     }
     .promocoes-cartao{
+        margin-left: 20px;
         position: relative;
         width: 400px !important;
-        height: 100% !important;
+        height: 90vh !important;
     }
     .promocoes-cartao .imagem-apresentacao{
         width: 400px !important;
-        object-fit: cover;
-        height: 200px;
+        height: 160px !important;
     }
-    .promocoes-cartao img{
-        width: 100%;
-        object-fit: cover;
-        height: 200px;
-    }
-    .promocoes .estrela{
-        margin-left: 10px;
-        width: 100px;
-        height: 15px;
-        display: block;
-    }
-    .promocoes .estrela img{
-        width: 15px;
-        height: 15px;
+    .promocoes-conteudo{
+        margin: 2vh 0 3vh 0;
+        height: calc(70vh - 170px) !important;
+        display: flex;
+        flex-direction: column !important;
     }
     .brasil{
         display: none;
@@ -126,8 +118,8 @@
         width: 69px !important;
         height: 56px !important;
         background-color: rgba(0, 0, 0, .0);
-        bottom: 134px !important;
-        left: 168px !important;
+        bottom: 135px !important;
+        left: 166px !important;
     }
     
     #mg:hover{
@@ -175,8 +167,20 @@
     }
     from{
         transform: rotateZ(90deg);
-        opacity: 0;
+        opacity: 50%;
         background-image: url("../img/close-menu.svg");
+    }
+}
+@keyframes mudarBotao2{
+    from{
+        transform: rotateZ(0);
+        opacity: 100%;
+        background-image: url("../img/close-menu.svg");
+    }
+    from{
+        transform: rotateZ(-90deg);
+        opacity: 50%;
+        background-image: url("../img/open-menu.svg");
     }
 }
 @media(max-width: 450px){
@@ -185,9 +189,10 @@
         display: block !important;
     }
     #main #background{
-        width: 100%;
+        width: 100% !important;
         background-size: cover;
         height: 100% !important;
+        content: url("../img/background-mobile.png") !important;
     }
     .cabecalho{
         height: 45vh !important;
@@ -252,79 +257,31 @@
         margin: 0 15px ;
         position: absolute;
         background-image: url("../img/open-menu.svg");
-        width: 20px;
-        height: 20px;
+        width: 20px !important;
+        height: 20px !important;
         z-index: 10000;
     }
     .fechar-botao{
         width: 20px;
+        height: 20px; 
+        animation: mudarBotao2 1s ease forwards;
+        background-image: url("../img/open-menu.svg");
+    }
+    .abrir-botao{
+        width: 20px;
         height: 20px;
-        animation: mudarBotao 1s ease;
+        animation: mudarBotao 1s ease forwards;
         background-image: url("../img/close-menu.svg");
     }
-
-    .promocoes{
-        margin-top: 0;
-        width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        justify-content: start !important;
-    }
     .promocoes-cartao{
-        margin: 10px;
-        bottom: 50px;
-        position: relative;
-        width: 95vw !important;
-        height: 95vh !important;
+        margin-left: 1.8vw;
     }
-    .promocoes-cartao .imagem-apresentacao{
-        width: 95vw !important;
-        object-fit: cover;
-        height: 160px;
-    }
-    .promocoes-cartao img{
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-        height: 160px;
-    }
-    .promocoes .estrela{
-        margin-left: 10px;
-        width: 100px;
-        height: 15px;
-        display: block;
-    }
-    .promocoes .estrela img{
-        width: 15px;
-        height: 15px;
-    }
-    .topo-cartao h2{
-        position: relative;
-        top: 40px;
-        text-align: center;
-        background-color: #012E40 !important;
-        border-radius: 6px 6px 0 0 ;
-        color: #F2E3D5;
-        padding: 10px 0;
-    }
-    .rodape-cartao a{
-        margin: 0;
-        text-align: center;
-        display: block;
-        width: 100%;
-        height: 35px !important;
-        background-color: #012E40;
-        border-radius: 0 0 6px 6px ;
-        color: #F2E3D5;
-        padding: 10px 0 5px 0;
-    }
+
     .promocoes-cartao .desconto{
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        margin-left: 290px !important;
-        margin-top: 180px !important;
+        margin-left: 280px !important;
     }
+
+
     .sobre-logo{
         display: none !important;
     }
@@ -345,6 +302,9 @@
         width: 100%;
         height: 100%;
     }
+}
+html, body {
+    overflow-x: hidden !important;
 }
 .cabecalho{
     position: absolute;
@@ -594,7 +554,7 @@
     background-color: #012E40;
     color: #F2E3D5;
     padding: 10px 0;
-    top: 100px;
+    top: 112px;
     transition: all 1s ease-in;
     transform: rotateX(90deg);
     transform-origin: bottom;
@@ -620,36 +580,59 @@
     display: flex;
     justify-content: center;
     gap:  50px;
-    margin-top: 100px;
+    margin: 100px 0;
     width: 100%;
-    height: 97%;   
+    height: 90vh; 
 }
 .promocoes-cartao{
     width: 400px;
-    height: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    height: 90vh;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 150px;
 }
-
-.topo-cartao h2{
-    text-align: center;
+.topo-cartao{
     background-color: #012E40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
     border-radius: 6px 6px 0 0 ;
-    color: #F2E3D5;
     padding: 10px 0;
+}
+.topo-cartao h2{
+    color: #F2E3D5;
+}
+.imagem-apresentacao{
+    width: 100%;
+}
+.promocoes-conteudo{
+    margin: 2vh 0 2vh 0;
+    height: calc(70vh - 200px);
+    display: flex;
+    flex-direction: column !important;
 }
 .promocoes-cartao h3{
     margin-left: 10px;
 }
-.rodape-cartao a{
-    margin: 0;
-    text-align: center;
+.preco{
+    margin: 3vh 0 2vh 0;
     display: block;
-    width: 100%;
-    height: 30px;
-    background-color: #012E40;
+    font-size: 15px !important;
+}
+.rodape-cartao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    padding: 10px 0;
     border-radius: 0 0 6px 6px ;
+    background-color: #012E40;
+}
+.rodape-cartao a{
     color: #F2E3D5;
-    padding: 10px 0 5px 0;
 }
 .promocoes-cartao .desconto{
     position: absolute;
@@ -658,6 +641,7 @@
     margin-left: 320px;
     margin-top: 220px;
 }
+
 .promocoes-cartao img{
     width: 100%;
     object-fit: cover;
